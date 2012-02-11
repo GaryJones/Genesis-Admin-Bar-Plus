@@ -32,6 +32,9 @@
  * Main plugin class. Adds Genesis-related resource links to the admin bar
  * present in WordPress 3.1 and above.
  *
+ * @package GenesisAdminBarPlus
+ * @author  Gary Jones
+ *
  * @since 1.0.0
  */
 class Genesis_Admin_Bar_Plus {
@@ -43,7 +46,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string
 	 */
-	var $prefix = 'genesis-admin-bar-plus-';
+	public $prefix = 'genesis-admin-bar-plus-';
 
 	/**
 	 * Holds an instance of the Menu class.
@@ -52,16 +55,16 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var Genesis_Admin_Bar_Plus_Menu
 	 */
-	var $menu;
+	public $menu;
 
 	/**
 	 * Holds array of menu items.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var array Menu Items collection once finally pulled from Genesis_Admin_Bar_Plus
+	 * @var array Menu Items collection once finally pulled from Genesis_Admin_Bar_Plus.
 	 */
-	var $menu_items = array();
+	public $menu_items = array();
 
 	/**
 	 * Create Genesis menu item reference.
@@ -70,7 +73,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string
 	 */
-	var $genesis;
+	public $genesis;
 
 	/**
 	 * Create support menu item reference.
@@ -79,7 +82,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string
 	 */
-	var $support;
+	public $support;
 
 	/**
 	 * Create development menu item reference.
@@ -88,7 +91,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string
 	 */
-	var $dev;
+	public $dev;
 
 	/**
 	 * Create Studiopress menu item reference.
@@ -97,7 +100,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string
 	 */
-	var $studiopress;
+	public $studiopress;
 
 	/**
 	 * Create settings menu item reference.
@@ -106,7 +109,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string
 	 */
-	var $settings;
+	public $settings;
 
 	/**
 	 * The translation gettext domain for the plugin.
@@ -115,32 +118,30 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @var string Translation domain
 	 */
-	var $domain = 'genesis-admin-bar-plus';
+	public $domain = 'genesis-admin-bar-plus';
 
 	/**
 	 * Holds copy of instance, so other plugins can remove our hooks.
 	 *
 	 * @since 1.0.0
-	 * @link http://core.trac.wordpress.org/attachment/ticket/16149/query-standard-format-posts.php
-	 * @link http://twitter.com/#!/markjaquith/status/66862769030438912
 	 *
 	 * @var Genesis_Admin_Bar_Plus
 	 */
-	static $instance;
+	public static $instance;
 
 	/**
-	 * Constructor.
+	 * Assign copy of self, load translation ifles, and hook in other functions.
 	 *
 	 * @since 1.0.0
 	 */
-	function __construct() {
+	public function __construct() {
 
 		self::$instance = $this;
-		add_action( 'init', array( &$this, 'init' ) );
 
-		// Ensure plugin is translatable
-		if( ! load_plugin_textdomain( $this->domain, false, '/wp-content/languages/' ) )
+		if ( ! load_plugin_textdomain( $this->domain, false, '/wp-content/languages/' ) )
 			load_plugin_textdomain( $this->domain, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		add_action( 'init', array( &$this, 'init' ) );
 
 	}
 
@@ -149,7 +150,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @since 1.0.0
 	 */
-	function init() {
+	public function init() {
 
 		// Populate parent menu references
 		$this->genesis     = $this->prefix . 'genesis';
@@ -165,7 +166,7 @@ class Genesis_Admin_Bar_Plus {
 		// Hook style and menu items in
 		add_action( 'wp_head', array( &$this, 'style' ) );
 		add_action( 'admin_head', array( &$this, 'style' ) );
-		add_action( 'admin_bar_menu', array( &$this, 'set_default_menu_items' ), 95 );
+		add_action( 'admin_bar_menu', array( &$this, 'set_menu_items' ), 95 );
 		add_action( 'admin_bar_menu', array( &$this, 'add_menus' ), 96 );
 
 	}
@@ -181,248 +182,339 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @since 1.0.0
 	 */
-	function set_default_menu_items() {
+	public function set_menu_items() {
 
 		$menu = $this->menu;
 
 		// Add top-level Genesis item
-		$menu->add_item( 'genesis', array(
-			'title'    => __( 'Genesis', $this->domain ),
-			'href'     => '',
-			'position' => 0,
-			'meta'     => array( 'class' => 'gabp-icon-genesis gabp-no-link', 'target' => '', 'html' => '<span class="gabp-icon"></span>' )
-		) );
+		$menu->add_item(
+			'genesis',
+			array(
+				'title'    => '<span class="ab-icon"></span><span class="ab-label">' . _x( 'Genesis', 'admin bar menu group label', $this->domain ) . '</span>',
+				'href'     => '',
+				'position' => 0,
+			)
+		);
 
 		// Add Genesis menu items
-		$menu->add_item( 'support', array(
-			'parent'   => $this->genesis,
-			'title'    => __( 'Genesis Support', $this->domain ),
-			'href'     => 'http://www.studiopress.com/support',
-			'position' => 10
-		) );
-		$menu->add_item( 'dev', array(
-			'parent'   => $this->genesis,
-			'title'    => __( 'Genesis Codex', $this->domain ),
-			'href'     => 'http://dev.studiopress.com/',
-			'position' => 20
-		) );
-		$menu->add_item( 'studiopress', array(
-			'parent'   => $this->genesis,
-			'title'    => __( 'StudioPress', $this->domain ),
-			'href'     => 'http://www.studiopress.com/',
-			'position' => 30
-		) );
+		$menu->add_item(
+			'support',
+			array(
+				'parent'   => $this->genesis,
+				'title'    => __( 'Genesis Support', $this->domain ),
+				'href'     => 'http://www.studiopress.com/support',
+				'position' => 10,
+			)
+		);
+		$menu->add_item(
+			'dev',
+			array(
+				'parent'   => $this->genesis,
+				'title'    => __( 'Genesis Tutorials', $this->domain ),
+				'href'     => 'http://www.studiopress.com/tutorials',
+				'position' => 20,
+			)
+		);
+		$menu->add_item(
+			'studiopress',
+			array(
+				'parent'   => $this->genesis,
+				'title'    => __( 'StudioPress', $this->domain ),
+				'href'     => 'http://www.studiopress.com/',
+				'position' => 30,
+			)
+		);
 
 		// Add Support submenu items
 		$boards = $this->get_support_boards();
-		$i = 0;
-		foreach( $boards as $key => $board ) {
+		$board_count = 0;
+		foreach ( $boards as $key => $board ) {
 			if ( current_theme_supports( 'gabp-support-' . $key ) ) {
-				$menu->add_item( $key . '-support', array(
-					'parent'   => $this->support,
-					'title'    => $board[0],
-					'href'     => 'http://www.studiopress.com/support/forumdisplay.php?f=' . $this->get_support_board( $key ),
-					'position' => 10 + 2 * $i
-				) );
+				$menu->add_item(
+					$key . '-support',
+					array(
+						'parent'   => $this->support,
+						'title'    => $board[0],
+						'href'     => 'http://www.studiopress.com/support/forumdisplay.php?f=' . $this->get_support_board( $key ),
+						'position' => 10 + 2 * $board_count,
+					)
+				);
 			}
-			$i++;
+			$board_count++;
 		}
 
-		// Add Codex / Dev submenu items
-//		$menu->add_item( 'sitemap', array(
-//			'parent'   => $this->dev,
-//			'title'    => __( 'Dev.StudioPress Sitemap', $this->domain ),
-//			'href'     => 'http://dev.studiopress.com/sitemap',
-//			'position' => 10
-//		) );
-		$menu->add_item( 'hooks', array(
-			'parent'   => $this->dev,
-			'title'    => __( 'Action Hooks Reference', $this->domain ),
-			'href'     => 'http://dev.studiopress.com/hook-reference',
-			'position' => 20
-		) );
-		$menu->add_item( 'filters', array(
-			'parent'   => $this->dev,
-			'title'    => __( 'Filter Hooks Reference', $this->domain ),
-			'href'     => 'http://dev.studiopress.com/filter-reference',
-			'position' => 30
-		) );
-//		$menu->add_item( 'functions', array(
-//			'parent'   => $this->dev,
-//			'title'    => __( 'Functions Reference', $this->domain ),
-//			'href'     => 'http://dev.studiopress.com/function-reference',
-//			'position' => 40
-//		) );
-		$menu->add_item( 'shortcodes', array(
-			'parent'   => $this->dev,
-			'title'    => __( 'Shortcodes Reference', $this->domain ),
-			'href'     => 'http://dev.studiopress.com/shortcode-reference',
-			'position' => 50
-		) );
-		$menu->add_item( 'visual', array(
-			'parent'   => $this->dev,
-			'title'    => __( 'Visual Markup Guide', $this->domain ),
-			'href'     => 'http://dev.studiopress.com/visual-markup-guide',
-			'position' => 60
-		) );
+		// Add Tutorials submenu items
+		$menu->add_item(
+			'hooks',
+			array(
+				'parent'   => $this->dev,
+				'title'    => __( 'Action Hooks Reference', $this->domain ),
+				'href'     => 'http://www.studiopress.com/tutorials/hook-reference',
+				'position' => 20,
+			)
+		);
+		$menu->add_item(
+			'filters',
+			array(
+				'parent'   => $this->dev,
+				'title'    => __( 'Filter Hooks Reference', $this->domain ),
+				'href'     => 'http://www.studiopress.com/tutorials/filter-reference',
+				'position' => 30,
+			)
+		);
+		$menu->add_item(
+			'visual-hooks',
+			array(
+				'parent'   => $this->dev,
+				'title'    => __( 'Visual Hooks Guide', $this->domain ),
+				'href'     => 'http://genesistutorials.com/visual-hook-guide',
+				'position' => 35,
+			)
+		);
+//		$menu->add_item(
+//			'functions',
+//			array(
+//				'parent'   => $this->dev,
+//				'title'    => __( 'Functions Reference', $this->domain ),
+//				'href'     => 'http://dev.studiopress.com/function-reference',
+//				'position' => 40,
+//			)
+//		);
+		$menu->add_item(
+			'shortcodes',
+			array(
+				'parent'   => $this->dev,
+				'title'    => __( 'Shortcodes Reference', $this->domain ),
+				'href'     => 'http://www.studiopress.com/tutorials/shortcode-reference',
+				'position' => 50,
+			)
+		);
+		$menu->add_item(
+			'visual',
+			array(
+				'parent'   => $this->dev,
+				'title'    => __( 'Visual Markup Guide', $this->domain ),
+				'href'     => 'http://www.studiopress.com/tutorials/visual-markup-guide',
+				'position' => 60,
+			)
+		);
 
 		// Add StudioPress submenu items
-		$menu->add_item( 'themes', array(
-			'parent'   => $this->studiopress,
-			'title'    => __( 'Themes', $this->domain ),
-			'href'     => 'http://www.studiopress.com/themes',
-			'position' => 10
-		) );
-		$menu->add_item( 'plugins', array(
-			'parent'   => $this->studiopress,
-			'title'    => __( 'Plugins', $this->domain ),
-			'href'     => 'http://www.studiopress.com/plugins',
-			'position' => 20
-		) );
-		$menu->add_item( 'faqs', array(
-			'parent'   => $this->studiopress,
-			'title'    => __( '<abbr title="Frequently asked question">FAQ</abbr>s', $this->domain ),
-			'href'     => '',
-			'position' => 30,
-			'meta'     => array( 'target' => '', 'class' => 'gabp-no-link' )
-		) );
+		$menu->add_item(
+			'themes',
+			array(
+				'parent'   => $this->studiopress,
+				'title'    => __( 'Themes', $this->domain ),
+				'href'     => 'http://www.studiopress.com/themes',
+				'position' => 10,
+			)
+		);
+		$menu->add_item(
+			'plugins',
+			array(
+				'parent'   => $this->studiopress,
+				'title'    => __( 'Plugins', $this->domain ),
+				'href'     => 'http://www.studiopress.com/plugins',
+				'position' => 20,
+			)
+		);
+		$menu->add_item(
+			'faqs',
+			array(
+				'parent'   => $this->studiopress,
+				'title'    => __( '<abbr title="Frequently asked question">FAQ</abbr>s', $this->domain ),
+				'href'     => '',
+				'position' => 30,
+				'meta'     => array( 'target' => '', 'class' => 'gabp-no-link' ),
+			)
+		);
+		$menu->add_item(
+			'showcase',
+			array(
+				'parent'   => $this->studiopress,
+				'title'    => __( 'Showcase', $this->domain ),
+				'href'     => 'http://www.studiopress.com/showcase',
+				'position' => 40,
+			)
+		);
 
 		// Add FAQs sub-submenu items
-		$menu->add_item( 'general-faqs', array(
-			'parent'   => $this->faqs,
-			'title'    => __( 'General <abbr>FAQ</abbr>s', $this->domain ),
-			'href'     => 'http://www.studiopress.com/general-faqs',
-			'position' => 10
-		) );
-		$menu->add_item( 'support-faqs', array(
-			'parent'   => $this->faqs,
-			'title'    => __( 'Support <abbr>FAQ</abbr>s', $this->domain ),
-			'href'     => 'http://www.studiopress.com/support-faqs',
-			'position' => 20
-		) );
-		$menu->add_item( 'theme-faqs', array(
-			'parent'   => $this->faqs,
-			'title'    => __( 'Theme <abbr>FAQ</abbr>s', $this->domain ),
-			'href'     => 'http://www.studiopress.com/theme-faqs',
-			'position' => 30
-		) );
+		$menu->add_item(
+			'general-faqs',
+			array(
+				'parent'   => $this->faqs,
+				'title'    => __( 'General <abbr>FAQ</abbr>s', $this->domain ),
+				'href'     => 'http://www.studiopress.com/general-faqs',
+				'position' => 10,
+			)
+		);
+		$menu->add_item(
+			'support-faqs',
+			array(
+				'parent'   => $this->faqs,
+				'title'    => __( 'Support <abbr>FAQ</abbr>s', $this->domain ),
+				'href'     => 'http://www.studiopress.com/support-faqs',
+				'position' => 20,
+			)
+		);
+		$menu->add_item(
+			'theme-faqs',
+			array(
+				'parent'   => $this->faqs,
+				'title'    => __( 'Theme <abbr>FAQ</abbr>s', $this->domain ),
+				'href'     => 'http://www.studiopress.com/theme-faqs',
+				'position' => 30,
+			)
+		);
 
 		// Add Settings menu only if Genesis or a child theme is active
 		if ( defined( 'GENESIS_SETTINGS_FIELD' ) ) {
-
 			// Add Settings menu item
-			$menu->add_item( 'settings', array(
-				'parent'   => $this->genesis,
-				'title'    => __( 'Settings', $this->domain ),
-				'href'     => is_admin() ? menu_page_url( 'genesis', false ) : admin_url( add_query_arg( 'page', 'genesis', 'admin.php' ) ),
-				'position' => 40,
-				'meta'     => array( 'target' => '' )
-			) );
+			$menu->add_item(
+				'settings',
+				array(
+					'parent'   => $this->genesis,
+					'title'    => __( 'Settings', $this->domain ),
+					'href'     => is_admin() ? menu_page_url( 'genesis', false ) : admin_url( add_query_arg( 'page', 'genesis', 'admin.php' ) ),
+					'position' => 40,
+					'meta'     => array( 'target' => '' ),
+				)
+			);
 
 			// Add Settings submenu items
-			$menu->add_item( 'theme-settings', array(
-				'parent'   => $this->settings,
-				'title'    => __( 'Theme Settings', $this->domain ),
-				'href'     => is_admin() ? menu_page_url( 'genesis', false ) : admin_url( add_query_arg( 'page', 'genesis', 'admin.php' ) ),
-				'position' => 10,
-				'meta'     => array( 'target' => '' )
-			) );
-			$menu->add_item( 'seo-settings', array(
-				'parent'   => $this->settings,
-				'title'    => __( 'SEO Settings', $this->domain ),
-				'href'     => is_admin() ? menu_page_url( 'seo-settings', false ) : admin_url( add_query_arg( 'page', 'seo-settings', 'admin.php' ) ),
-				'position' => 20,
-				'meta'     => array( 'target' => '' )
-			) );
+			$menu->add_item(
+				'theme-settings',
+				array(
+					'parent'   => $this->settings,
+					'title'    => __( 'Theme Settings', $this->domain ),
+					'href'     => is_admin() ? menu_page_url( 'genesis', false ) : admin_url( add_query_arg( 'page', 'genesis', 'admin.php' ) ),
+					'position' => 10,
+					'meta'     => array( 'target' => '' ),
+				)
+			);
+			$menu->add_item(
+				'seo-settings',
+				array(
+					'parent'   => $this->settings,
+					'title'    => __( 'SEO Settings', $this->domain ),
+					'href'     => is_admin() ? menu_page_url( 'seo-settings', false ) : admin_url( add_query_arg( 'page', 'seo-settings', 'admin.php' ) ),
+					'position' => 20,
+					'meta'     => array( 'target' => '' ),
+				)
+			);
 
 			// Add Prose Design Settings if Prose is active
 			if ( defined( 'PROSE_DOMAIN' ) ) {
-				$menu->add_item( 'design-settings', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Design Settings', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'design-settings', false ) : admin_url( add_query_arg( 'page', 'design-settings', 'admin.php' ) ),
-					'position' => 30,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'design-settings',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Design Settings', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'design-settings', false ) : admin_url( add_query_arg( 'page', 'design-settings', 'admin.php' ) ),
+						'position' => 30,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// Add GenesisConnect Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'genesisconnect/genesisconnect.php' ) ) || function_exists( 'genesisconnect_init' ) ) {
-				$menu->add_item( 'genesisconnect', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'GenesisConnect', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'connect-settings', false ) : admin_url( add_query_arg( 'page', 'connect-settings', 'admin.php' ) ),
-					'position' => 40,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'genesisconnect',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'GenesisConnect', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'connect-settings', false ) : admin_url( add_query_arg( 'page', 'connect-settings', 'admin.php' ) ),
+						'position' => 40,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// Add Simple Breadcrumbs Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'genesis-simple-breadcrumbs/plugin.php' ) ) || function_exists( 'gsb_settings_init' ) ) {
-				$menu->add_item( 'simple-breadcrumbs', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Simple Breadcrumbs', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'gsb', false ) : admin_url( add_query_arg( 'page', 'gsb', 'admin.php' ) ),
-					'position' => 45,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'simple-breadcrumbs',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Simple Breadcrumbs', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'gsb', false ) : admin_url( add_query_arg( 'page', 'gsb', 'admin.php' ) ),
+						'position' => 45,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// Add Simple Edits Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'genesis-simple-edits/plugin.php' ) ) || defined( 'GSE_SETTINGS_FIELD' ) ) {
-				$menu->add_item( 'simple-edits', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Simple Edits', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'genesis-simple-edits', false ) : admin_url( add_query_arg( 'page', 'genesis-simple-edits', 'admin.php' ) ),
-					'position' => 50,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'simple-edits',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Simple Edits', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'genesis-simple-edits', false ) : admin_url( add_query_arg( 'page', 'genesis-simple-edits', 'admin.php' ) ),
+						'position' => 50,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// Add Simple Hooks Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'genesis-simple-hooks/plugin.php' ) ) || defined( 'SIMPLEHOOKS_SETTINGS_FIELD' ) ) {
-				$menu->add_item( 'simple-hooks', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Simple Hooks', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'simplehooks', false ) : admin_url( add_query_arg( 'page', 'simplehooks', 'admin.php' ) ),
-					'position' => 60,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'simple-hooks',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Simple Hooks', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'simplehooks', false ) : admin_url( add_query_arg( 'page', 'simplehooks', 'admin.php' ) ),
+						'position' => 60,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// No Simple Menus, as it has no settings page.
 
 			// Add Simple Sidebars Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'genesis-simple-sidebars/plugin.php' ) ) || defined( 'SS_SETTINGS_FIELD' ) ) {
-				$menu->add_item( 'simple-sidebars', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Simple Sidebars', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'simple-sidebars', false ) : admin_url( add_query_arg( 'page', 'simple-sidebars', 'admin.php' ) ),
-					'position' => 70,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'simple-sidebars',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Simple Sidebars', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'simple-sidebars', false ) : admin_url( add_query_arg( 'page', 'simple-sidebars', 'admin.php' ) ),
+						'position' => 70,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// Add Simple URLs Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'simple-urls/plugin.php' ) ) || class_exists( 'SimpleURLs' ) ) {
-				$menu->add_item( 'simple-urls', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Simple URLs', $this->domain ),
-					'href'     => admin_url( add_query_arg( 'post_type', 'surl', 'edit.php' ) ),
-					'position' => 80,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'simple-urls',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Simple URLs', $this->domain ),
+						'href'     => admin_url( add_query_arg( 'post_type', 'surl', 'edit.php' ) ),
+						'position' => 80,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// Add Genesis Slider Settings if active
 			if ( ( function_exists( 'is_plugin_active' ) && is_plugin_active( 'genesis-slider/plugin.php' ) ) || class_exists( 'Genesis_SliderWidget' ) ) {
-				$menu->add_item( 'genesis-slider', array(
-					'parent'   => $this->settings,
-					'title'    => __( 'Genesis Slider', $this->domain ),
-					'href'     => is_admin() ? menu_page_url( 'genesis_slider', false ) : admin_url( add_query_arg( 'page', 'genesis_slider', 'admin.php' ) ),
-					'position' => 90,
-					'meta'     => array( 'target' => '' )
-				) );
+				$menu->add_item(
+					'genesis-slider',
+					array(
+						'parent'   => $this->settings,
+						'title'    => __( 'Genesis Slider', $this->domain ),
+						'href'     => is_admin() ? menu_page_url( 'genesis_slider', false ) : admin_url( add_query_arg( 'page', 'genesis_slider', 'admin.php' ) ),
+						'position' => 90,
+						'meta'     => array( 'target' => '' ),
+					)
+				);
 			}
 
 			// No Genesis Tabs, as it has no settings page.
@@ -434,18 +526,19 @@ class Genesis_Admin_Bar_Plus {
 
 	/**
 	 * Ensure that child item has a minimum position equal to that of its parent.
-	 * Recursive function. Private.
+	 * Recursive function.
 	 *
 	 * @since  1.1.0
 	 *
-	 * @param  string $id Menu item ID
-	 * @param  array $menu_items Menu item arguments
+	 * @param  string $menu_item_id Menu item ID.
+	 * @param  array  $menu_items   Menu item arguments.
+	 *
 	 * @return array
 	 */
-	function _pre_sort( $id ) {
+	private function _pre_sort( $menu_item_id ) {
 
 		/** Get the menu item arguments */
-		$menu_item = $this->menu_items[$id];
+		$menu_item = $this->menu_items[$menu_item_id];
 
 		/** Stop recursion on items already recursed */
 		if ( isset( $menu_item['pre_sorted'] ) )
@@ -457,7 +550,7 @@ class Genesis_Admin_Bar_Plus {
 
 		/** Easter Egg - give position of child items as 0, and get random order! */
 		if ( 0 == $menu_item['position'] )
-			$this->menu_items[$id]['position'] = mt_rand( 1, 99 );
+			$this->menu_items[$menu_item_id]['position'] = mt_rand( 1, 99 );
 
 		/** Get the parent menu item ID */
 		$parent_id = str_replace( $this->prefix, '', $menu_item['parent'] );
@@ -466,7 +559,7 @@ class Genesis_Admin_Bar_Plus {
 		$parent_item = $this->menu_items[$parent_id];
 
 		/** Add recursion flag */
-		$this->menu_items[$id]['pre_sorted'] = true;
+		$this->menu_items[$menu_item_id]['pre_sorted'] = true;
 
 		/** If the parent menu item has it's own parent, recurse this function */
 		if ( isset( $parent_item['parent'] ) ) {
@@ -476,28 +569,29 @@ class Genesis_Admin_Bar_Plus {
 		}
 
 		/** Add parent item position to child position */
-		$this->menu_items[$id]['position'] = $this->menu_items[$id]['position'] + $parent_item['position'];
+		$this->menu_items[$menu_item_id]['position'] = $this->menu_items[$menu_item_id]['position'] + $parent_item['position'];
 
 	}
 
 	/**
-	 * Helper function to sort the menu items by position. Private.
+	 * Helper function to sort the menu items by position.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @param integer $a
 	 * @param integer $b
-	 * @return integer
+	 *
+	 * @return integer Returns 1 or -1.
 	 */
-	function _sort( $a, $b ) {
+	private function _sort( $item_a, $item_b ) {
 
-		$ap = (int) $a['position'];
-		$bp = (int) $b['position'];
+		$item_a_position = (int) $item_a['position'];
+		$item_b_position = (int) $item_b['position'];
 
-		if ( $ap == $bp ) {
+		if ( $item_a_position == $item_b_position ) {
             return 0;
         }
-        return ( $ap > $bp ) ? +1 : -1;
+        return ( $item_a_position > $item_b_position ) ? 1 : -1;
 
 	}
 
@@ -508,13 +602,14 @@ class Genesis_Admin_Bar_Plus {
 	 * filter.
 	 *
 	 * @since 1.0.0
+	 *
 	 * @uses  Genesis_Admin_Bar_Plus::sort() Helper function for uasort()
 	 * @uses  Genesis_Admin_Bar_Plus_Menu::get_items() Return default menu items
 	 * @uses  validate_child_item_position() Pre-sort menu items
 	 *
 	 * @global WP_Admin_Bar $wp_admin_bar
 	 */
-	function add_menus() {
+	public function add_menus() {
 
 		global $wp_admin_bar;
 
@@ -531,7 +626,6 @@ class Genesis_Admin_Bar_Plus {
 
 		// Loop through menu items
 		foreach ( $this->menu_items as $id => $menu_item ) {
-
 			// Add in item ID
 			$menu_item['id'] = $this->prefix . $id;
 
@@ -563,23 +657,31 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @return array Array of support boards.
 	 */
-	function get_support_boards() {
+	public function get_support_boards() {
 
 		$boards = array(
 			'genesis'            => array( __( 'Genesis Framework', $this->domain ), 75 ),
 			'free'               => array( __( 'Free Child Themes', $this->domain ), 171 ),
 			'agency'             => array( __( 'Agency Child Theme', $this->domain ), 119 ),
 			'agentpress'         => array( __( 'AgentPress Child Theme', $this->domain ), 86 ),
+			'agentpress2'        => array( __( 'AgentPress 2 Child Theme', $this->domain ), 188 ),
 			'amped'              => array( __( 'Amped Child Theme', $this->domain ), 93 ),
 			'associate'          => array( __( 'Associate Child Theme', $this->domain ), 174 ),
+			'backcountry'        => array( __( 'Backcountry Child Theme', $this->domain ), 195 ),
+			'balance'            => array( __( 'Balance Child Theme', $this->domain ), 201 ),
 			'beecrafty'          => array( __( 'BeeCrafty Child Theme', $this->domain ), 138 ),
 			'blingless'          => array( __( 'Blingless Child Theme', $this->domain ), 181 ),
 			'blissful'           => array( __( 'Blissful Child Theme', $this->domain ), 169 ),
 			'church'             => array( __( 'Church Child Theme', $this->domain ), 124 ),
+			'clip-cart'          => array( __( 'Clip Cart Child Theme', $this->domain ), 196 ),
 			'corporate'          => array( __( 'Corporate Child Theme', $this->domain ), 109 ),
+			'cre8tive-burst'     => array( __( 'Cre8tive Burst Child Theme', $this->domain ), 200 ),
 			'crystal'            => array( __( 'Crystal Child Theme', $this->domain ), 160 ),
+			'curtail'            => array( __( 'Crystal Child Theme', $this->domain ), 191 ),
 			'delicious'          => array( __( 'Delicious Child Theme', $this->domain ), 130 ),
+			'driskill'           => array( __( 'Driskill Child Theme', $this->domain ), 189 ),
 			'education'          => array( __( 'Education Child Theme', $this->domain ), 126 ),
+			'eleven40'           => array( __( 'eleven40 Child Theme', $this->domain ), 199 ),
 			'elle'               => array( __( 'Elle Child Theme', $this->domain ), 176 ),
 			'enterprise'         => array( __( 'Enterprise Child Theme', $this->domain ), 102 ),
 			'executive'          => array( __( 'Executive Child Theme', $this->domain ), 79 ),
@@ -589,11 +691,13 @@ class Genesis_Admin_Bar_Plus {
 			'fashionista'        => array( __( 'Fashionista Child Theme', $this->domain ), 185 ),
 			'focus'              => array( __( 'Focus Child Theme', $this->domain ), 167 ),
 			'freelance'          => array( __( 'Freelance Child Theme', $this->domain ), 121 ),
+			'generate'           => array( __( 'Generate Child Theme', $this->domain ), 197 ),
 			'going-green'        => array( __( 'Going Green Child Theme', $this->domain ), 116 ),
 			'landscape'          => array( __( 'Landscape Child Theme', $this->domain ), 108 ),
 			'lexicon'            => array( __( 'Lexicon Child Theme', $this->domain ), 146 ),
 			'legacy'             => array( __( 'Legacy Child Theme', $this->domain ), 184 ),
 			'lifestyle'          => array( __( 'Lifestyle Child Theme', $this->domain ), 92 ),
+			'luscious'           => array( __( 'Luscious Child Theme', $this->domain ), 190 ),
 			'magazine'           => array( __( 'Magazine Child Theme', $this->domain ), 128 ),
 			'manhattan'          => array( __( 'Manhattan Child Theme', $this->domain ), 152 ),
 			'maximum'            => array( __( 'Maximum Child Theme', $this->domain ), 177 ),
@@ -607,10 +711,12 @@ class Genesis_Admin_Bar_Plus {
 			'outreach'           => array( __( 'Outreach Child Theme', $this->domain ), 112 ),
 			'pixel-happy'        => array( __( 'Pixel Happy Child Theme', $this->domain ), 87 ),
 			'platinum'           => array( __( 'Platinum Child Theme', $this->domain ), 73 ),
+			'politica'           => array( __( 'Politica Child Theme', $this->domain ), 192 ),
 			'pretty-young-thing' => array( __( 'Pretty Young Thing Child Theme', $this->domain ), 166 ),
 			'prose'              => array( __( 'Prose Child Theme', $this->domain ), 147 ),
-			'serenity'           => array( __( 'Serenity Child Theme', $this->domain ), 84 ),
+			'pure-elegance'      => array( __( 'Pure Elegance Child Theme', $this->domain ), 198 ),
 			'scribble'           => array( __( 'Scribble Child Theme', $this->domain ), 186 ),
+			'serenity'           => array( __( 'Serenity Child Theme', $this->domain ), 84 ),
 			'sleek'              => array( __( 'Sleek Child Theme', $this->domain ), 132 ),
 			'social-eyes'        => array( __( 'Social Eyes Child Theme', $this->domain ), 165 ),
 			'streamline'         => array( __( 'Streamline Child Theme', $this->domain ), 81 ),
@@ -619,8 +725,9 @@ class Genesis_Admin_Bar_Plus {
 			'vintage'            => array( __( 'Vintage Child Theme', $this->domain ), 178 ),
 			'translations'       => array( __( 'Genesis Translations', $this->domain ), 168 ),
 			'plugins'            => array( __( 'StudioPress Plugins', $this->domain ), 142 ),
-			'genesisconnect'     => array( __( 'GenesisConnect', $this->domain ), 155 )
+			'genesisconnect'     => array( __( 'GenesisConnect', $this->domain ), 155 ),
 		);
+
 		return (array) apply_filters( 'gabp_support_boards', $boards );
 
 	}
@@ -632,9 +739,10 @@ class Genesis_Admin_Bar_Plus {
 	 * @since  1.0.0
 	 *
 	 * @param  string $name Lowercase, hyphen-spaced theme name, e.g. family-tree.
+	 *
 	 * @return integer|boolean Support board ID, or false if board not found.
 	 */
-	function get_support_board( $name ) {
+	public function get_support_board( $name ) {
 
 		$boards = $this->get_support_boards();
 		if ( isset( $boards[$name] ) )
@@ -654,7 +762,7 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * @since 1.0.0
 	 */
-	function style() {
+	public function style() {
 
 		if ( ! is_admin_bar_showing() )
 			return;
@@ -670,29 +778,21 @@ class Genesis_Admin_Bar_Plus {
 				margin-left: 5px;
 				width: 7px;
 			}
-			#wpadminbar .menupop>a[target=_blank]:after {
+			#wpadminbar .menupop > a[target=_blank]:after {
 				display: none;
 			}
-			#wpadminbar .gabp-no-link>a {
-				cursor: default;
+			#wpadminbar abbr {
+				color: #333;
+				text-shadow: none;
+			}
+			#wpadminbar a > abbr {
+				color: #21759b;
 			}
 			<?php
 			if ( defined( 'GENESIS_SETTINGS_FIELD' ) ) {
 			?>
-			#wpadminbar .gabp-icon-genesis>a span {
-				padding-left: 20px;
-			}
-			#wpadminbar .gabp-icon-genesis {
-				position: relative;
-			}
-			#wpadminbar .gabp-icon {
-				background: url(<?php echo PARENT_URL; ?>/images/genesis.gif) center center no-repeat;
-				display: block;
-				height: 16px;
-				left: 0.85em;
-				position: absolute;
-				top: 0.5em;
-				width: 16px;
+			#wp-admin-bar-genesis-admin-bar-plus-genesis > .ab-item .ab-icon {
+				background: url(<?php echo PARENT_URL; ?>/images/genesis.gif) no-repeat center;
 			}
 			<?php if ( is_RTL() ) { ?>
 			#wpadminbar a[target=_blank]:after,
@@ -700,13 +800,6 @@ class Genesis_Admin_Bar_Plus {
 				background-position: center right;
 				margin-left: 0;
 				margin-right: 5px;
-			}
-			#wpadminbar .gabp-icon {
-				left: auto;
-				right: 0.85em;
-			}
-			#wpadminbar .gabp-icon-genesis>a span {
-				padding-right: 20px !important;
 			}
 			<?php }
 			} ?>
@@ -720,13 +813,13 @@ class Genesis_Admin_Bar_Plus {
 	 *
 	 * Can be activated by uncommenting the line near the top of this file.
 	 *
-	 * @since  1.1.0
+	 * @since 1.1.0
 	 *
 	 * @return boolean
 	 */
-	function is_debug() {
+	public function is_debug() {
 
-		if (  ( defined( 'GABP_DEBUG') && GABP_DEBUG ) || ( isset( $_GET['gabp-debug'] ) ) )
+		if ( ( defined( 'GABP_DEBUG' ) && GABP_DEBUG ) || ( isset( $_GET['gabp-debug'] ) ) )
 			return true;
 		return false;
 
@@ -742,23 +835,23 @@ class Genesis_Admin_Bar_Plus {
 class Genesis_Admin_Bar_Plus_Menu {
 
 	/**
-	 * Holds menu items. Private.
+	 * Holds menu items.
 	 *
 	 * @var array
 	 */
-	var $menu_items = array();
+	private $menu_items = array();
 
 	/**
 	 * Assign the menu item to the array using the ID as the key. Public.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $id Menu item identifier
-	 * @param array $args Menu item arguments
+	 * @param string $id   Menu item identifier.
+	 * @param array  $args Menu item arguments.
 	 */
-	function add_item( $id, $args ) {
+	public function add_item( $menu_item_id, $args ) {
 
-		$this->menu_items[$id] = $args;
+		$this->menu_items[$menu_item_id] = $args;
 
 	}
 
@@ -770,10 +863,10 @@ class Genesis_Admin_Bar_Plus_Menu {
 	 * @param  string $id Menu item identifier
 	 * @return array Menu item arguments
 	 */
-	function get_item( $id ) {
+	public function get_item( $menu_item_id ) {
 
-		if( isset( $this->menu_items[$id] ) )
-			return $this->menu_items[$id];
+		if( isset( $this->menu_items[$menu_item_id] ) )
+			return $this->menu_items[$menu_item_id];
 		return false;
 
 	}
@@ -786,9 +879,9 @@ class Genesis_Admin_Bar_Plus_Menu {
 	 * @param string $id Menu item identifier
 	 * @param array $args Menu item arguments
 	 */
-	function edit_item( $id, $args ) {
+	public function edit_item( $menu_item_id, $args ) {
 
-		$this->menu_items[$id] = wp_parse_args( $args, $this->menu_items[$id] );
+		$this->menu_items[$menu_item_id] = wp_parse_args( $args, $this->menu_items[$menu_item_id] );
 
 	}
 
@@ -799,10 +892,10 @@ class Genesis_Admin_Bar_Plus_Menu {
 	 *
 	 * @param string $id Menu item identifier
 	 */
-	function remove_item( $id ) {
+	public function remove_item( $menu_item_id ) {
 
-		if( isset( $this->menu_items[$id] ) )
-			unset( $this->menu_items[$id] );
+		if( isset( $this->menu_items[$menu_item_id] ) )
+			unset( $this->menu_items[$menu_item_id] );
 
 	}
 
@@ -813,7 +906,7 @@ class Genesis_Admin_Bar_Plus_Menu {
 	 *
 	 * @return array All menu items
 	 */
-	function get_items() {
+	public function get_items() {
 
 		return $this->menu_items;
 
