@@ -4,7 +4,7 @@ Donate link: http://code.garyjones.co.uk/donate/
 Tags: admin bar, genesis
 Requires at least: 3.3
 Tested up to: 3.3.1
-Stable tag: 1.2.5
+Stable tag: 1.3.0
 
 Adds resource links related to the Genesis Framework to the admin bar.
 
@@ -68,7 +68,7 @@ Genesis Simple Menus and Genesis Tabs can't be supported as they have no individ
 
 == Changelog ==
 
-= Next =
+= 1.3.0 =
 * Added Italian language files to the plugin (props [http://gidibao.net/](Gianni Diurno))
 * Added support for AgentPress 2, Backcountry, Balance, eleven40, Generate and Luscious themes.
 * Added support for Clip Cart, Cre8tive Burst, Curtail, Driskill, Politica and Pure Elegance Marketplace themes.

@@ -7,7 +7,7 @@
  *
  * @wordpress
  * Plugin Name: Genesis Admin Bar Plus
- * Version:     1.2.5
+ * Version:     1.3.0
  * Plugin URI:  http://code.garyjones.co.uk/plugins/genesis-admin-bar-plus/
  * Description: The plugin adds resources links related the <a href="http://genesis-theme-framework.com/">Genesis Theme</a> to the admin bar. It is a complete rewrite, effectively forked from <a href="http://profiles.wordpress.org/users/DeFries/">DeFries</a>' <a href="http://wordpress.org/extend/plugins/genesis-admin-bar-addition/">Genesis Admin Bar Addition</a>. See the readme for how to add specific support boards and other items to the menu.
  * Author:      Gary Jones
