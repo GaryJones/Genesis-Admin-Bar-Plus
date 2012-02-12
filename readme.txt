@@ -137,6 +137,9 @@ Genesis Simple Menus and Genesis Tabs can't be supported as they have no individ
 
 == Upgrade Notice ==
 
+= 1.3.0 =
+Several changes - Added Italian language, improved code, fixed overlapping icon issue, added support for lots more themes.
+
 = 1.2.5 =
 Minor changes - Improved strings for translations, add support for three themes, improved readme.
 
