@@ -148,249 +148,249 @@ msgstr "Genesis Framework"
 #: genesis-admin-bar-plus.php:664
 #@ genesis-admin-bar-plus
 msgid "Free Child Themes"
-msgstr ""
+msgstr "Gratis Subthema`s"
 
 #: genesis-admin-bar-plus.php:665
 #@ genesis-admin-bar-plus
 msgid "Agency Child Theme"
-msgstr ""
+msgstr "Agency Subthema"
 
 #: genesis-admin-bar-plus.php:666
 #@ genesis-admin-bar-plus
 msgid "AgentPress Child Theme"
-msgstr ""
+msgstr "AgentPress Subthema"
 
 #: genesis-admin-bar-plus.php:668
 #@ genesis-admin-bar-plus
 msgid "Amped Child Theme"
-msgstr ""
+msgstr "Amped Subthema"
 
 #: genesis-admin-bar-plus.php:669
 #@ genesis-admin-bar-plus
 msgid "Associate Child Theme"
-msgstr ""
+msgstr "Associate Subthema"
 
 #: genesis-admin-bar-plus.php:672
 #@ genesis-admin-bar-plus
 msgid "BeeCrafty Child Theme"
-msgstr ""
+msgstr "BeeCrafty Subthema"
 
 #: genesis-admin-bar-plus.php:673
 #@ genesis-admin-bar-plus
 msgid "Blingless Child Theme"
-msgstr ""
+msgstr "Blingless Subthema"
 
 #: genesis-admin-bar-plus.php:674
 #@ genesis-admin-bar-plus
 msgid "Blissful Child Theme"
-msgstr ""
+msgstr "Blissful Subthema"
 
 #: genesis-admin-bar-plus.php:675
 #@ genesis-admin-bar-plus
 msgid "Church Child Theme"
-msgstr ""
+msgstr "Church Subthema"
 
 #: genesis-admin-bar-plus.php:677
 #@ genesis-admin-bar-plus
 msgid "Corporate Child Theme"
-msgstr ""
+msgstr "Corporate Subthema"
 
 #: genesis-admin-bar-plus.php:679
 #: genesis-admin-bar-plus.php:680
 #@ genesis-admin-bar-plus
 msgid "Crystal Child Theme"
-msgstr ""
+msgstr "Crystal Subthema"
 
 #: genesis-admin-bar-plus.php:681
 #@ genesis-admin-bar-plus
 msgid "Delicious Child Theme"
-msgstr ""
+msgstr "Delicious Subthema"
 
 #: genesis-admin-bar-plus.php:683
 #@ genesis-admin-bar-plus
 msgid "Education Child Theme"
-msgstr ""
+msgstr "Education Subthema"
 
 #: genesis-admin-bar-plus.php:685
 #@ genesis-admin-bar-plus
 msgid "Elle Child Theme"
-msgstr ""
+msgstr "Elle Subthema"
 
 #: genesis-admin-bar-plus.php:686
 #@ genesis-admin-bar-plus
 msgid "Enterprise Child Theme"
-msgstr ""
+msgstr "Enterprise Subthema"
 
 #: genesis-admin-bar-plus.php:687
 #@ genesis-admin-bar-plus
 msgid "Executive Child Theme"
-msgstr ""
+msgstr "Executive Subthema"
 
 #: genesis-admin-bar-plus.php:688
 #@ genesis-admin-bar-plus
 msgid "Expose Child Theme"
-msgstr ""
+msgstr "Expose Subthema"
 
 #: genesis-admin-bar-plus.php:689
 #: genesis-admin-bar-plus.php:690
 #@ genesis-admin-bar-plus
 msgid "Family Tree Child Theme"
-msgstr ""
+msgstr "Family Tree Subthema"
 
 #: genesis-admin-bar-plus.php:691
 #@ genesis-admin-bar-plus
 msgid "Fashionista Child Theme"
-msgstr ""
+msgstr "Fashionista Subthema"
 
 #: genesis-admin-bar-plus.php:692
 #@ genesis-admin-bar-plus
 msgid "Focus Child Theme"
-msgstr ""
+msgstr "Focus Subthema"
 
 #: genesis-admin-bar-plus.php:693
 #@ genesis-admin-bar-plus
 msgid "Freelance Child Theme"
-msgstr ""
+msgstr "Freelance Subthema"
 
 #: genesis-admin-bar-plus.php:695
 #@ genesis-admin-bar-plus
 msgid "Going Green Child Theme"
-msgstr ""
+msgstr "Going Green Subthema"
 
 #: genesis-admin-bar-plus.php:696
 #@ genesis-admin-bar-plus
 msgid "Landscape Child Theme"
-msgstr ""
+msgstr "Landscape Subthema"
 
 #: genesis-admin-bar-plus.php:697
 #@ genesis-admin-bar-plus
 msgid "Lexicon Child Theme"
-msgstr ""
+msgstr "Lexicon Subthema"
 
 #: genesis-admin-bar-plus.php:698
 #@ genesis-admin-bar-plus
 msgid "Legacy Child Theme"
-msgstr ""
+msgstr "Legacy Subthema"
 
 #: genesis-admin-bar-plus.php:699
 #@ genesis-admin-bar-plus
 msgid "Lifestyle Child Theme"
-msgstr ""
+msgstr "Lifestyle Subthema"
 
 #: genesis-admin-bar-plus.php:701
 #@ genesis-admin-bar-plus
 msgid "Magazine Child Theme"
-msgstr ""
+msgstr "Magazine Subthema"
 
 #: genesis-admin-bar-plus.php:702
 #@ genesis-admin-bar-plus
 msgid "Manhattan Child Theme"
-msgstr ""
+msgstr "Manhattan Subthema"
 
 #: genesis-admin-bar-plus.php:703
 #@ genesis-admin-bar-plus
 msgid "Maximum Child Theme"
-msgstr ""
+msgstr "Maximum Subthema"
 
 #: genesis-admin-bar-plus.php:704
 #@ genesis-admin-bar-plus
 msgid "Metric Child Theme"
-msgstr ""
+msgstr "Metric Subthema"
 
 #: genesis-admin-bar-plus.php:705
 #@ genesis-admin-bar-plus
 msgid "Midnight Child Theme"
-msgstr ""
+msgstr "Midnight Subthema"
 
 #: genesis-admin-bar-plus.php:706
 #@ genesis-admin-bar-plus
 msgid "Minimum Child Theme"
-msgstr ""
+msgstr "Minimum Subthema"
 
 #: genesis-admin-bar-plus.php:707
 #@ genesis-admin-bar-plus
 msgid "Mocha Child Theme"
-msgstr ""
+msgstr "Mocha Subthema"
 
 #: genesis-admin-bar-plus.php:708
 #@ genesis-admin-bar-plus
 msgid "Modern Blogger Child Theme"
-msgstr ""
+msgstr "Modern Blogger Subthema"
 
 #: genesis-admin-bar-plus.php:709
 #@ genesis-admin-bar-plus
 msgid "News Child Theme"
-msgstr ""
+msgstr "News Subthema"
 
 #: genesis-admin-bar-plus.php:710
 #@ genesis-admin-bar-plus
 msgid "Nitrous Child Theme"
-msgstr ""
+msgstr "Nitrous Subthema"
 
 #: genesis-admin-bar-plus.php:711
 #@ genesis-admin-bar-plus
 msgid "Outreach Child Theme"
-msgstr ""
+msgstr "Outreach Subthema"
 
 #: genesis-admin-bar-plus.php:712
 #@ genesis-admin-bar-plus
 msgid "Pixel Happy Child Theme"
-msgstr ""
+msgstr "Pixel Happy Subthema"
 
 #: genesis-admin-bar-plus.php:713
 #@ genesis-admin-bar-plus
 msgid "Platinum Child Theme"
-msgstr ""
+msgstr "Pretty Young Subthema"
 
 #: genesis-admin-bar-plus.php:715
 #@ genesis-admin-bar-plus
 msgid "Pretty Young Thing Child Theme"
-msgstr ""
+msgstr "Pretty Young Thing Subthema"
 
 #: genesis-admin-bar-plus.php:716
 #@ genesis-admin-bar-plus
 msgid "Prose Child Theme"
-msgstr ""
+msgstr "Prose Subthema"
 
 #: genesis-admin-bar-plus.php:719
 #@ genesis-admin-bar-plus
 msgid "Serenity Child Theme"
-msgstr ""
+msgstr "Serenity Subthema"
 
 #: genesis-admin-bar-plus.php:718
 #@ genesis-admin-bar-plus
 msgid "Scribble Child Theme"
-msgstr ""
+msgstr "Scribble Subthema"
 
 #: genesis-admin-bar-plus.php:720
 #@ genesis-admin-bar-plus
 msgid "Sleek Child Theme"
-msgstr ""
+msgstr "Sleek Subthema"
 
 #: genesis-admin-bar-plus.php:721
 #@ genesis-admin-bar-plus
 msgid "Social Eyes Child Theme"
-msgstr ""
+msgstr "Social Eyes Subthema"
 
 #: genesis-admin-bar-plus.php:722
 #@ genesis-admin-bar-plus
 msgid "Streamline Child Theme"
-msgstr ""
+msgstr "Streamline Subthema"
 
 #: genesis-admin-bar-plus.php:723
 #@ genesis-admin-bar-plus
 msgid "Tapestry Child Theme"
-msgstr ""
+msgstr "Tapestry Subthema"
 
 #: genesis-admin-bar-plus.php:724
 #@ genesis-admin-bar-plus
 msgid "Venture Child Theme"
-msgstr ""
+msgstr "Venture Subthema"
 
 #: genesis-admin-bar-plus.php:725
 #@ genesis-admin-bar-plus
 msgid "Vintage Child Theme"
-msgstr ""
+msgstr "Vintage Subthema"
 
 #: genesis-admin-bar-plus.php:726
 #@ genesis-admin-bar-plus
@@ -426,55 +426,55 @@ msgstr "Showcase"
 #: genesis-admin-bar-plus.php:667
 #@ genesis-admin-bar-plus
 msgid "AgentPress 2 Child Theme"
-msgstr ""
+msgstr "AgentPress 2 Subthema"
 
 #: genesis-admin-bar-plus.php:670
 #@ genesis-admin-bar-plus
 msgid "Backcountry Child Theme"
-msgstr ""
+msgstr "Backcountry Subthema"
 
 #: genesis-admin-bar-plus.php:671
 #@ genesis-admin-bar-plus
 msgid "Balance Child Theme"
-msgstr ""
+msgstr "Balance Subthema"
 
 #: genesis-admin-bar-plus.php:676
 #@ genesis-admin-bar-plus
 msgid "Clip Cart Child Theme"
-msgstr ""
+msgstr "Clip Cart Subthema"
 
 #: genesis-admin-bar-plus.php:678
 #@ genesis-admin-bar-plus
 msgid "Cre8tive Burst Child Theme"
-msgstr ""
+msgstr "Cre8tive Burst Subthema"
 
 #: genesis-admin-bar-plus.php:682
 #@ genesis-admin-bar-plus
 msgid "Driskill Child Theme"
-msgstr ""
+msgstr "Driskill Subthema"
 
 #: genesis-admin-bar-plus.php:684
 #@ genesis-admin-bar-plus
 msgid "eleven40 Child Theme"
-msgstr ""
+msgstr "Eleven40 Subthema"
 
 #: genesis-admin-bar-plus.php:694
 #@ genesis-admin-bar-plus
 msgid "Generate Child Theme"
-msgstr ""
+msgstr "Generate Subthema"
 
 #: genesis-admin-bar-plus.php:700
 #@ genesis-admin-bar-plus
 msgid "Luscious Child Theme"
-msgstr ""
+msgstr "Luscious Subthema"
 
 #: genesis-admin-bar-plus.php:714
 #@ genesis-admin-bar-plus
 msgid "Politica Child Theme"
-msgstr ""
+msgstr "Politica Subthema"
 
 #: genesis-admin-bar-plus.php:717
 #@ genesis-admin-bar-plus
 msgid "Pure Elegance Child Theme"
-msgstr ""
+msgstr "Pure Elegance Subthema"
 
