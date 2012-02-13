@@ -22,37 +22,37 @@ msgstr ""
 #: genesis-admin-bar-plus.php:204
 #@ genesis-admin-bar-plus
 msgid "Genesis Support"
-msgstr ""
+msgstr "Genesis Support"
 
 #: genesis-admin-bar-plus.php:222
 #@ genesis-admin-bar-plus
 msgid "StudioPress"
-msgstr ""
+msgstr "StudioPress"
 
 #: genesis-admin-bar-plus.php:251
 #@ genesis-admin-bar-plus
 msgid "Action Hooks Reference"
-msgstr ""
+msgstr "Action Hooks Referentie"
 
 #: genesis-admin-bar-plus.php:260
 #@ genesis-admin-bar-plus
 msgid "Filter Hooks Reference"
-msgstr ""
+msgstr "Filter Hooks Referentie"
 
 #: genesis-admin-bar-plus.php:287
 #@ genesis-admin-bar-plus
 msgid "Shortcodes Reference"
-msgstr ""
+msgstr "Shortcode Referentie"
 
 #: genesis-admin-bar-plus.php:296
 #@ genesis-admin-bar-plus
 msgid "Visual Markup Guide"
-msgstr ""
+msgstr "Visuele Opmaak Gids"
 
 #: genesis-admin-bar-plus.php:307
 #@ genesis-admin-bar-plus
 msgid "Themes"
-msgstr ""
+msgstr "Thema`s"
 
 #: genesis-admin-bar-plus.php:316
 #@ genesis-admin-bar-plus
@@ -62,88 +62,88 @@ msgstr "Plugins"
 #: genesis-admin-bar-plus.php:325
 #@ genesis-admin-bar-plus
 msgid "<abbr title=\"Frequently asked question\">FAQ</abbr>s"
-msgstr ""
+msgstr "<abbr title=\"Veel gestelde vragen\">FAQ</abbr>s"
 
 #: genesis-admin-bar-plus.php:346
 #@ genesis-admin-bar-plus
 msgid "General <abbr>FAQ</abbr>s"
-msgstr ""
+msgstr "Algemene<abbr>FAQ</abbr>s"
 
 #: genesis-admin-bar-plus.php:355
 #@ genesis-admin-bar-plus
 msgid "Support <abbr>FAQ</abbr>s"
-msgstr ""
+msgstr "Support <abbr>FAQ</abbr>s"
 
 #: genesis-admin-bar-plus.php:364
 #@ genesis-admin-bar-plus
 msgid "Theme <abbr>FAQ</abbr>s"
-msgstr ""
+msgstr "Thema <abbr>FAQ</abbr>s"
 
 #: genesis-admin-bar-plus.php:377
 #@ genesis-admin-bar-plus
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 #: genesis-admin-bar-plus.php:389
 #@ genesis-admin-bar-plus
 msgid "Theme Settings"
-msgstr ""
+msgstr "Thema Instellingen"
 
 #: genesis-admin-bar-plus.php:399
 #@ genesis-admin-bar-plus
 msgid "SEO Settings"
-msgstr ""
+msgstr "SEO Instellingen"
 
 #: genesis-admin-bar-plus.php:412
 #@ genesis-admin-bar-plus
 msgid "Design Settings"
-msgstr ""
+msgstr "Design Instellingen"
 
 #: genesis-admin-bar-plus.php:426
 #: genesis-admin-bar-plus.php:728
 #@ genesis-admin-bar-plus
 msgid "GenesisConnect"
-msgstr ""
+msgstr "GenesisConnect"
 
 #: genesis-admin-bar-plus.php:440
 #@ genesis-admin-bar-plus
 msgid "Simple Breadcrumbs"
-msgstr ""
+msgstr "Simpele Broodkruimels"
 
 #: genesis-admin-bar-plus.php:454
 #@ genesis-admin-bar-plus
 msgid "Simple Edits"
-msgstr ""
+msgstr "Simpele Wijzigingen"
 
 #: genesis-admin-bar-plus.php:468
 #@ genesis-admin-bar-plus
 msgid "Simple Hooks"
-msgstr ""
+msgstr "Simpele Hooks"
 
 #: genesis-admin-bar-plus.php:484
 #@ genesis-admin-bar-plus
 msgid "Simple Sidebars"
-msgstr ""
+msgstr "Simpele Zijbalken"
 
 #: genesis-admin-bar-plus.php:498
 #@ genesis-admin-bar-plus
 msgid "Simple URLs"
-msgstr ""
+msgstr "Simpele URLs"
 
 #: genesis-admin-bar-plus.php:512
 #@ genesis-admin-bar-plus
 msgid "Genesis Slider"
-msgstr ""
+msgstr "Genesis Slider"
 
 #: genesis-admin-bar-plus.php:640
 #@ genesis-admin-bar-plus
 msgid "Calculated menu position"
-msgstr ""
+msgstr "Berekende menu positie"
 
 #: genesis-admin-bar-plus.php:663
 #@ genesis-admin-bar-plus
 msgid "Genesis Framework"
-msgstr ""
+msgstr "Genesis Framework"
 
 #: genesis-admin-bar-plus.php:664
 #@ genesis-admin-bar-plus
@@ -395,12 +395,12 @@ msgstr ""
 #: genesis-admin-bar-plus.php:726
 #@ genesis-admin-bar-plus
 msgid "Genesis Translations"
-msgstr ""
+msgstr "Genesis Vertalingen"
 
 #: genesis-admin-bar-plus.php:727
 #@ genesis-admin-bar-plus
 msgid "StudioPress Plugins"
-msgstr ""
+msgstr "StudioPress Plugins"
 
 #: genesis-admin-bar-plus.php:193
 #@ genesis-admin-bar-plus
@@ -411,17 +411,17 @@ msgstr "Genesis"
 #: genesis-admin-bar-plus.php:213
 #@ genesis-admin-bar-plus
 msgid "Genesis Tutorials"
-msgstr ""
+msgstr "Genesis Handleidingen"
 
 #: genesis-admin-bar-plus.php:269
 #@ genesis-admin-bar-plus
 msgid "Visual Hooks Guide"
-msgstr ""
+msgstr "Visuele Hooks Gids"
 
 #: genesis-admin-bar-plus.php:335
 #@ genesis-admin-bar-plus
 msgid "Showcase"
-msgstr ""
+msgstr "Showcase"
 
 #: genesis-admin-bar-plus.php:667
 #@ genesis-admin-bar-plus
