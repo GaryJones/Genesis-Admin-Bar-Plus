@@ -1,0 +1,480 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Genesis Admin Bar Plus 1.2.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/genesis-admin-bar-plus\n"
+"POT-Creation-Date: 2011-05-14 09:43:47+00:00\n"
+"PO-Revision-Date: 2011-09-07 21:41:00+00:00\n"
+"Last-Translator: Gary Jones <gary@garyjones.co.uk>\n"
+"Language-Team: Gary Jones <gary@garyjones.co.uk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: genesis-admin-bar-plus.php:204
+#@ genesis-admin-bar-plus
+msgid "Genesis Support"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:222
+#@ genesis-admin-bar-plus
+msgid "StudioPress"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:251
+#@ genesis-admin-bar-plus
+msgid "Action Hooks Reference"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:260
+#@ genesis-admin-bar-plus
+msgid "Filter Hooks Reference"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:287
+#@ genesis-admin-bar-plus
+msgid "Shortcodes Reference"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:296
+#@ genesis-admin-bar-plus
+msgid "Visual Markup Guide"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:307
+#@ genesis-admin-bar-plus
+msgid "Themes"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:316
+#@ genesis-admin-bar-plus
+msgid "Plugins"
+msgstr "Plugins"
+
+#: genesis-admin-bar-plus.php:325
+#@ genesis-admin-bar-plus
+msgid "<abbr title=\"Frequently asked question\">FAQ</abbr>s"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:346
+#@ genesis-admin-bar-plus
+msgid "General <abbr>FAQ</abbr>s"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:355
+#@ genesis-admin-bar-plus
+msgid "Support <abbr>FAQ</abbr>s"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:364
+#@ genesis-admin-bar-plus
+msgid "Theme <abbr>FAQ</abbr>s"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:377
+#@ genesis-admin-bar-plus
+msgid "Settings"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:389
+#@ genesis-admin-bar-plus
+msgid "Theme Settings"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:399
+#@ genesis-admin-bar-plus
+msgid "SEO Settings"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:412
+#@ genesis-admin-bar-plus
+msgid "Design Settings"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:426
+#: genesis-admin-bar-plus.php:728
+#@ genesis-admin-bar-plus
+msgid "GenesisConnect"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:440
+#@ genesis-admin-bar-plus
+msgid "Simple Breadcrumbs"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:454
+#@ genesis-admin-bar-plus
+msgid "Simple Edits"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:468
+#@ genesis-admin-bar-plus
+msgid "Simple Hooks"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:484
+#@ genesis-admin-bar-plus
+msgid "Simple Sidebars"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:498
+#@ genesis-admin-bar-plus
+msgid "Simple URLs"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:512
+#@ genesis-admin-bar-plus
+msgid "Genesis Slider"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:640
+#@ genesis-admin-bar-plus
+msgid "Calculated menu position"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:663
+#@ genesis-admin-bar-plus
+msgid "Genesis Framework"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:664
+#@ genesis-admin-bar-plus
+msgid "Free Child Themes"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:665
+#@ genesis-admin-bar-plus
+msgid "Agency Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:666
+#@ genesis-admin-bar-plus
+msgid "AgentPress Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:668
+#@ genesis-admin-bar-plus
+msgid "Amped Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:669
+#@ genesis-admin-bar-plus
+msgid "Associate Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:672
+#@ genesis-admin-bar-plus
+msgid "BeeCrafty Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:673
+#@ genesis-admin-bar-plus
+msgid "Blingless Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:674
+#@ genesis-admin-bar-plus
+msgid "Blissful Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:675
+#@ genesis-admin-bar-plus
+msgid "Church Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:677
+#@ genesis-admin-bar-plus
+msgid "Corporate Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:679
+#: genesis-admin-bar-plus.php:680
+#@ genesis-admin-bar-plus
+msgid "Crystal Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:681
+#@ genesis-admin-bar-plus
+msgid "Delicious Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:683
+#@ genesis-admin-bar-plus
+msgid "Education Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:685
+#@ genesis-admin-bar-plus
+msgid "Elle Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:686
+#@ genesis-admin-bar-plus
+msgid "Enterprise Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:687
+#@ genesis-admin-bar-plus
+msgid "Executive Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:688
+#@ genesis-admin-bar-plus
+msgid "Expose Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:689
+#: genesis-admin-bar-plus.php:690
+#@ genesis-admin-bar-plus
+msgid "Family Tree Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:691
+#@ genesis-admin-bar-plus
+msgid "Fashionista Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:692
+#@ genesis-admin-bar-plus
+msgid "Focus Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:693
+#@ genesis-admin-bar-plus
+msgid "Freelance Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:695
+#@ genesis-admin-bar-plus
+msgid "Going Green Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:696
+#@ genesis-admin-bar-plus
+msgid "Landscape Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:697
+#@ genesis-admin-bar-plus
+msgid "Lexicon Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:698
+#@ genesis-admin-bar-plus
+msgid "Legacy Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:699
+#@ genesis-admin-bar-plus
+msgid "Lifestyle Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:701
+#@ genesis-admin-bar-plus
+msgid "Magazine Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:702
+#@ genesis-admin-bar-plus
+msgid "Manhattan Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:703
+#@ genesis-admin-bar-plus
+msgid "Maximum Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:704
+#@ genesis-admin-bar-plus
+msgid "Metric Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:705
+#@ genesis-admin-bar-plus
+msgid "Midnight Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:706
+#@ genesis-admin-bar-plus
+msgid "Minimum Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:707
+#@ genesis-admin-bar-plus
+msgid "Mocha Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:708
+#@ genesis-admin-bar-plus
+msgid "Modern Blogger Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:709
+#@ genesis-admin-bar-plus
+msgid "News Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:710
+#@ genesis-admin-bar-plus
+msgid "Nitrous Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:711
+#@ genesis-admin-bar-plus
+msgid "Outreach Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:712
+#@ genesis-admin-bar-plus
+msgid "Pixel Happy Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:713
+#@ genesis-admin-bar-plus
+msgid "Platinum Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:715
+#@ genesis-admin-bar-plus
+msgid "Pretty Young Thing Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:716
+#@ genesis-admin-bar-plus
+msgid "Prose Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:719
+#@ genesis-admin-bar-plus
+msgid "Serenity Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:718
+#@ genesis-admin-bar-plus
+msgid "Scribble Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:720
+#@ genesis-admin-bar-plus
+msgid "Sleek Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:721
+#@ genesis-admin-bar-plus
+msgid "Social Eyes Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:722
+#@ genesis-admin-bar-plus
+msgid "Streamline Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:723
+#@ genesis-admin-bar-plus
+msgid "Tapestry Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:724
+#@ genesis-admin-bar-plus
+msgid "Venture Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:725
+#@ genesis-admin-bar-plus
+msgid "Vintage Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:726
+#@ genesis-admin-bar-plus
+msgid "Genesis Translations"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:727
+#@ genesis-admin-bar-plus
+msgid "StudioPress Plugins"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:193
+#@ genesis-admin-bar-plus
+msgctxt "admin bar menu group label"
+msgid "Genesis"
+msgstr "Genesis"
+
+#: genesis-admin-bar-plus.php:213
+#@ genesis-admin-bar-plus
+msgid "Genesis Tutorials"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:269
+#@ genesis-admin-bar-plus
+msgid "Visual Hooks Guide"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:335
+#@ genesis-admin-bar-plus
+msgid "Showcase"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:667
+#@ genesis-admin-bar-plus
+msgid "AgentPress 2 Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:670
+#@ genesis-admin-bar-plus
+msgid "Backcountry Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:671
+#@ genesis-admin-bar-plus
+msgid "Balance Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:676
+#@ genesis-admin-bar-plus
+msgid "Clip Cart Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:678
+#@ genesis-admin-bar-plus
+msgid "Cre8tive Burst Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:682
+#@ genesis-admin-bar-plus
+msgid "Driskill Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:684
+#@ genesis-admin-bar-plus
+msgid "eleven40 Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:694
+#@ genesis-admin-bar-plus
+msgid "Generate Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:700
+#@ genesis-admin-bar-plus
+msgid "Luscious Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:714
+#@ genesis-admin-bar-plus
+msgid "Politica Child Theme"
+msgstr ""
+
+#: genesis-admin-bar-plus.php:717
+#@ genesis-admin-bar-plus
+msgid "Pure Elegance Child Theme"
+msgstr ""
+
