@@ -1,9 +1,16 @@
+# This German Language File: Copyright (C) 2011-2012 by David Decker of deckerweb.de & genesisthemes.de
+# This file is distributed under the same license as the Genesis Admin Bar Plus Plugin package.
+#
+# Weitere deutsche Sprachdateien fuer Genesis Framework, Genesis Child Themes und Genesis Plugins
+# sowie WordPress Plugins und Themes sind hier zu finden:
+# --> http://deckerweb.de/sprachdateien/
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Admin Bar Plus (GABP)\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/genesis-admin-bar-plus\n"
 "POT-Creation-Date: 2010-06-23 17:08+0000\n"
-"PO-Revision-Date: 2011-09-08 16:39+0100\n"
+"PO-Revision-Date: 2012-02-13 10:44+0100\n"
 "Last-Translator: David Decker <deckerweb.mobil@googlemail.com>\n"
 "Language-Team: DECKERWEB <deckerweb.mobil@googlemail.com>\n"
 "MIME-Version: 1.0\n"
@@ -68,7 +75,7 @@ msgstr "Plugins (von StudioPress)"
 #@ genesis-admin-bar-plus
 #: genesis-admin-bar-plus.php:235
 msgid "<abbr title=\"Frequently asked question\">FAQ</abbr>s"
-msgstr "<abbr title=\"H&auml;ufig gestellte Fragen\">FAQ</abbr>s"
+msgstr "<abbr title=\"Häufig gestellte Fragen\">FAQ</abbr>s"
 
 #@ genesis-admin-bar-plus
 #: genesis-admin-bar-plus.php:244
@@ -134,7 +141,7 @@ msgstr "Simple URLs (Plugin)"
 #@ genesis-admin-bar-plus
 #: genesis-admin-bar-plus.php:494
 msgid "Calculated menu position"
-msgstr "Berechnete Men&uuml;position"
+msgstr "Berechnete Menüposition"
 
 #@ genesis-admin-bar-plus
 #: genesis-admin-bar-plus.php:517
@@ -320,7 +327,7 @@ msgstr "Venture Child Theme"
 #@ genesis-admin-bar-plus
 #: genesis-admin-bar-plus.php:568
 msgid "Genesis Translations"
-msgstr "Genesis-&Uuml;bersetzungen"
+msgstr "Genesis-Übersetzungen"
 
 #@ genesis-admin-bar-plus
 #: genesis-admin-bar-plus.php:569
