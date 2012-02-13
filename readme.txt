@@ -68,6 +68,13 @@ Genesis Simple Menus and Genesis Tabs can't be supported as they have no individ
 
 == Changelog ==
 
+= Next =
+* Refactored some strings to reduce number of translatable strings.
+* Created new POT file - changes between 1.2.5 and 1.3.1 resulted in 4 new and 54 obsoleted strings.
+* Improved the POT file headers.
+* Fixed missing update notice from previous release.
+* Fixed name of Fabric Child Theme support board link.
+
 = 1.3.0 =
 * Added Italian language files to the plugin (props [http://gidibao.net/](Gianni Diurno))
 * Added support for AgentPress 2, Backcountry, Balance, eleven40, Generate and Luscious themes.
@@ -136,6 +143,12 @@ Genesis Simple Menus and Genesis Tabs can't be supported as they have no individ
 * First public version.
 
 == Upgrade Notice ==
+
+= Next =
+Fixed name of Fabric Child Theme support board, improved various i18n issues.
+
+= 1.3.0 =
+Several changes - Added Italian language, improved code, fixed overlapping icon issue, added support for lots more themes.
 
 = 1.2.5 =
 Minor changes - Improved strings for translations, add support for three themes, improved readme.
