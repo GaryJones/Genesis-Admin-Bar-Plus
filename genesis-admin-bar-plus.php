@@ -202,7 +202,7 @@ class Genesis_Admin_Bar_Plus {
 			array(
 				'parent'   => $this->genesis,
 				'title'    => __( 'Genesis Support', $this->domain ),
-				'href'     => 'http://www.studiopress.com/support',
+				'href'     => 'http://www.studiopress.com/forum',
 				'position' => 10,
 			)
 		);
@@ -792,7 +792,8 @@ class Genesis_Admin_Bar_Plus {
 			if ( defined( 'GENESIS_SETTINGS_FIELD' ) ) {
 			?>
 			#wp-admin-bar-genesis-admin-bar-plus-genesis > .ab-item .ab-icon {
-				background: url(<?php echo PARENT_URL; ?>/images/genesis.gif) no-repeat center;
+				background: url(<?php echo PARENT_URL; ?>/images/favicon.png)  no-repeat center;
+				background-size:16px 16px;
 			}
 			<?php if ( is_RTL() ) { ?>
 			#wpadminbar a[target=_blank]:after,
